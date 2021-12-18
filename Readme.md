@@ -1,9 +1,9 @@
-## Loja online de Jogos
+## Loja Online de Jogos
 
 ### Funcionalidade do Sistema
 
 A proposta desse projeto é desenvolver uma loja de jogos para consoles e computadores. Os usuários que acessarem o site poderão vizualizar o catálogo de jogos e realizar a compra.
-Os títulos disponíveis são escolhidos e adicionados pelo admnistrador da plataforma.
+Os títulos disponíveis são escolhidos e adicionados pelo administrador da plataforma.
 
 <hr>
 
