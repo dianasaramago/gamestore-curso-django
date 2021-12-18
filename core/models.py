@@ -18,7 +18,6 @@ class Desenvolvedora(models.Model):
         
     nome = models.CharField(max_length=255)
     site = models.URLField()
-    logotipo = models.ImageField()
     
     def __str__(self):
         return self.nome
@@ -41,7 +40,6 @@ class Jogo(models.Model):
     titulo = models.CharField(max_length=255)
     ano = models.IntegerField()
     resumo = models.TextField(max_length=1000)
-    imagem = models.ImageField()
     quantidade = models.IntegerField()
     preco = models.FloatField()
     genero = models.ForeignKey(Genero, on_delete=models.PROTECT, related_name="jogos")
