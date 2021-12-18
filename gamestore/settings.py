@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-)$s6pc()e7&tu-!&2^xh@$e-dhybd9i(g$h!fe-tm0yunq&1s@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'gamestore-curso-django.herokuapp.com'
+]
 
 
 # Application definition
