@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import F
 from django.contrib.auth.models import User
 
 
@@ -61,6 +62,13 @@ class Compra(models.Model):
         
     usuario = models.ForeignKey(User, on_delete=models.PROTECT, related_name="compras")
     status = models.IntegerField(choices=StatusCompra.choices, default=StatusCompra.CARRINHO)
+    
+    @property
+    def total(self):
+        queryset = self.itens.all().aggregate(
+            total = models.Sum(F('quantidade') * F('jogo__preco'))
+            )
+        return queryset['total']
 
 
 class ItensCompra(models.Model):

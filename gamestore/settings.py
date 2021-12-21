@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-)$s6pc()e7&tu-!&2^xh@$e-dhybd9i(g$h!fe-tm0yunq&1s@
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'gamestore-curso-django.herokuapp.com'
+    'gamestore-curso-django.herokuapp.com',
+    '127.0.0.1',
 ]
 
 
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'core',
 ]
 
