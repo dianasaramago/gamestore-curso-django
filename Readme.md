@@ -14,5 +14,5 @@ Username: admin1<br />
 Password: minhasenha1<br />
 
 Login Comprador:<br />
-Username: comprador<br />
+Username: comprador1<br />
 Password: minhasenha1<br />
