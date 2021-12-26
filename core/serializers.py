@@ -1,5 +1,7 @@
 from django.db.models.base import Model
+
 from rest_framework.serializers import ModelSerializer, CharField, SerializerMethodField
+from rest_framework import serializers
 
 from core.models import Genero, Desenvolvedora, Plataforma, Jogo, Compra, ItensCompra
 
@@ -68,6 +70,13 @@ class CriarEditarItensCompraSerializer(ModelSerializer):
     class Meta:
         model = ItensCompra
         fields = ['jogo', 'quantidade']
+    
+    def validate(self, data):
+        if data['quantidade'] > data['jogo'].quantidade:
+            raise serializers.ValidationError({
+                'quantidade': 'Quantidade solicitada não disponível em estoque'
+            })
+        return data
 
 
 class CompraSerializer(ModelSerializer):
@@ -85,6 +94,7 @@ class CompraSerializer(ModelSerializer):
 
 class CriarEditarCompraSerializer(ModelSerializer):
     itens = CriarEditarItensCompraSerializer(many=True)
+    usuario = serializers.HiddenField(default=serializers.CurrentUserDefault())
     
     class Meta:
         model = Compra

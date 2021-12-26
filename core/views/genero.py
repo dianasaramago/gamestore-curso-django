@@ -1,5 +1,4 @@
 from rest_framework.viewsets import ModelViewSet
-
 from core.models import Genero
 from core.serializers import GeneroSerializer
 
