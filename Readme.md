@@ -9,6 +9,6 @@ Os títulos disponíveis são escolhidos e adicionados pelo administrador da pla
 
 Deploy: [Heroku](https://gamestore-curso-django.herokuapp.com/api/swagger/) 
 
-Login Admnistrador:
+Login Admnistrador:<br />
 Username: admin1<br />
 Password: minhasenha1
