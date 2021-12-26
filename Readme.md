@@ -12,3 +12,7 @@ Deploy: [Heroku](https://gamestore-curso-django.herokuapp.com/api/swagger/)
 Login Administrador:<br />
 Username: admin1<br />
 Password: minhasenha1<br />
+
+Login Comprador:<br />
+Username: comprador<br />
+Password: minhasenha1<br />
